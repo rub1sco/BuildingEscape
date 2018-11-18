@@ -1,0 +1,8 @@
+#Unreal Generated Files#
+**/Binaries
+**/Build
+**/DerivedDataCache
+**/Intermediate
+**/Saved
+**/.xcuserdata
+BuildingEscape/Content/StarterContent/
