@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "DrawDebugHelpers.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Components/InputComponent.h"
 #include "Grabber1.generated.h"
 
 
@@ -30,5 +32,12 @@ public:
 private:
     //How far to reach
     float Reach = 100.f;
-		
+	
+    UPhysicsHandleComponent* PhysicsHandle = nullptr;
+    UInputComponent* InputComponent = nullptr;
+    
+    
+    //Ray-Cast and grab what's in reach
+    void Grab();
+    void Release();
 };
