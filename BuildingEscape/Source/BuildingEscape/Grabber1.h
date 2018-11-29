@@ -40,4 +40,11 @@ private:
     //Ray-Cast and grab what's in reach
     void Grab();
     void Release();
+    
+    //Find physics component
+    void FindPhysicsComponent();
+    void FindInputComponent();
+    const FHitResult GetFirstPhysicsBodyInReach();
+    FVector GetReachLineEnd();
+    FVector GetReachLineStart();
 };

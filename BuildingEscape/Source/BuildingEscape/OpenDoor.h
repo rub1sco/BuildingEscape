@@ -24,6 +24,7 @@ protected:
     
     void OpenDoor();
     void CloseDoor();
+    float getTotalMassOfActorOnPlate();
 
 public:	
 	// Called every frame
@@ -35,7 +36,7 @@ private:
     float OpenAngle = 0.0f;
     
 	UPROPERTY(EditAnywhere)
-    ATriggerVolume* PressurePlate;
+    ATriggerVolume* PressurePlate = nullptr;
     
     UPROPERTY(EditAnywhere)
     float DoorCloseDelay = 1.f;
@@ -43,8 +44,7 @@ private:
     
     //GetWorld method in CPP replaces this in editable area in gameplay
 //    UPROPERTY(EditAnywhere)
-    AActor* ActorThatOpens; //Remember Pawn inherits from actor
-    AActor* Owner; //The owning door
+    AActor* Owner = nullptr; //The owning door
     
     
 	
